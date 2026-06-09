@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,18 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vanilla App Template</title>
     <link rel="stylesheet" href="./css/styles.css" />
+
+    <script type="module" src="./js/main.js"></script>
   </head>
+
   <body>
-    <load src="./partials/header.html" icon-path="img/sprite.svg#logo" />
-
     <main>
-      <!-- Loads the specified .html file -->
-      <load src="./partials/vite-promo.html" />
-      <load src="./partials/badges.html" />
+      <form class="search">
+        <input class="inp" type="text" placeholder="Search images..." />
+        <button class="btn" type="submit">Search</button>
+      </form>
+
+      <ul class="gallery"></ul>
+      <div class="loader hidden">
+        <p>Searching images, please wait...</p>
+        <div class="spinner"></div>
+      </div>
+
+      <!-- 👇 YÜKLE BUTONU (EN DIŞTA, GALLERY ALTINDA) -->
+      <div class="load-more-wrapper hidden">
+        <button class="btn rep-btn hidden" type="button">Load More</button>
+      </div>
     </main>
-
-    <load src="./partials/footer.html" />
-
-    <script type="module" src="./main.js"></script>
   </body>
 </html>
