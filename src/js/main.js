@@ -135,12 +135,13 @@ btn.addEventListener('click', e => {
   e.preventDefault();
 
   const newQuery = input.value.trim();
-
   if (!newQuery) {
     iziToast.warning({
       message: 'Please enter a search query',
       position: 'topRight',
     });
+    gallery.innerHTML = '';
+    repBtn.classList.add('hidden');
     return;
   }
 
